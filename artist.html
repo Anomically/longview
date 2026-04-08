@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists Directory | Longview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Long<span>view</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="news.html">News</a>
+            <a href="culture.html">Culture</a>
+            <a href="artist.html">Artists</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Daftar Musisi & Band</h2>
+        
+        <div style="margin-bottom: 40px; display: flex; justify-content: center;">
+            <input type="text" id="artistSearch" placeholder="Cari nama artis atau genre (contoh: Emo, Punk)..." 
+                   style="width: 100%; max-width: 500px; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: white; border-radius: 8px; font-size: 1rem;">
+        </div>
+
+        <div class="grid">
+            
+            <div class="card" style="text-align: center; padding-top: 25px;">
+                <img src="https://cdn.britannica.com/26/198426-050-90AAAC1B/Green-Day-Mike-Dirnt-Billie-Joe-Armstrong.jpg" alt="Green Day" 
+                     style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: auto; border: 3px solid var(--accent-color); transition: 0.3s;">
+                <div class="card-content">
+                    <span class="tag">Punk Rock</span>
+                    <h3>Green Day</h3>
+                    <p>Ikon punk rock modern asal California yang meledak lewat album Dookie.</p>
+                    <a href="greenday.html" class="btn" style="padding: 10px 25px; font-size: 13px;">Lihat Profil</a>
+                </div>
+            </div>
+
+            <div class="card" style="text-align: center; padding-top: 25px;">
+                <img src="https://images.kerrangcdn.com/images/MCR5_Header.jpg?auto=compress&fit=max&w=1200" alt="My Chemical Romance" 
+                     style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: auto; border: 3px solid #666; transition: 0.3s;">
+                <div class="card-content">
+                    <span class="tag">Emo / Alt Rock</span>
+                    <h3>My Chemical Romance</h3>
+                    <p>Membawa narasi teatrikal dan emosional ke puncak tangga lagu dunia.</p>
+                    <a href="mcr.html" class="btn" style="padding: 10px 25px; font-size: 13px;">Lihat Profil</a>
+                </div>
+            </div>
+
+            <div class="card" style="text-align: center; padding-top: 25px;">
+                <img src="https://wallpapers.com/images/file/nirvana-4k-band-group-photo-wvgpkpod60wrpq9z.jpg" alt="Nirvana" 
+                     style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: auto; border: 3px solid #444; transition: 0.3s;">
+                <div class="card-content">
+                    <span class="tag">Grunge</span>
+                    <h3>Nirvana</h3>
+                    <p>Suara dari Seattle yang mendefinisikan musik alternatif generasi 90-an.</p>
+                    <a href="#" class="btn" style="padding: 10px 25px; font-size: 13px;">Lihat Profil</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; background: #000; color: #666; border-top: 1px solid #333; margin-top: 80px;">
+        <p>&copy; 2026 Longview Music Portal. Built with Passion.</p>
+        <div style="margin-top: 10px;">
+            <a href="#" style="color: #444; margin: 0 10px; text-decoration: none; font-size: 14px;">Instagram</a>
+            <a href="#" style="color: #444; margin: 0 10px; text-decoration: none; font-size: 14px;">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

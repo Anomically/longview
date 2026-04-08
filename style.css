@@ -1,0 +1,119 @@
+/* 1. Pengaturan Variabel & Global */
+:root { 
+    --bg-color: #121212; 
+    --card-bg: #1e1e1e; 
+    --text-main: #f5f5f5; 
+    --text-muted: #a0a0a0;
+    --accent-color: #e50914; 
+}
+
+body { 
+    margin: 0; 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    background-color: var(--bg-color); 
+    color: var(--text-main); 
+    line-height: 1.6;
+}
+
+/* 2. Header & Navigasi */
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 5%; 
+    background-color: rgba(18, 18, 18, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.logo { 
+    font-size: 28px; 
+    font-weight: 900; 
+    color: var(--text-main); 
+    text-decoration: none; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo span { color: var(--accent-color); }
+
+nav a { 
+    color: var(--text-main); 
+    text-decoration: none; 
+    margin-left: 25px; 
+    font-size: 14px; 
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover { color: var(--accent-color); }
+
+/* 3. Hero Section (Banner Utama) */
+.hero { 
+    height: 70vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 0 20px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(18,18,18,1)), 
+                url('https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=2000') center/cover no-repeat; 
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 15px; max-width: 800px; line-height: 1.2; }
+.hero p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; max-width: 600px; }
+
+.btn { 
+    padding: 12px 30px; 
+    background-color: var(--accent-color); 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    transition: 0.3s;
+}
+.btn:hover { background-color: #b80710; transform: scale(1.05); }
+
+/* 4. Layout Konten & Grid */
+.container { padding: 60px 5%; }
+
+.section-title { 
+    font-size: 24px; 
+    border-left: 5px solid var(--accent-color); 
+    padding-left: 15px; 
+    margin-bottom: 40px; 
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+}
+
+/* 5. Kartu Artikel/Review */
+.card { 
+    background-color: var(--card-bg); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+.card img { width: 100%; height: 250px; object-fit: cover; border-bottom: 3px solid var(--accent-color); }
+
+.card-content { padding: 20px; }
+.tag { font-size: 12px; color: var(--accent-color); font-weight: bold; text-transform: uppercase; }
+.card h3 { margin: 10px 0; font-size: 20px; }
+.card p { color: var(--text-muted); font-size: 14px; }
+
+/* 6. Responsivitas Ponsel */
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 15px; text-align: center; }
+    nav a { margin: 0 10px; font-size: 12px; }
+    .hero h1 { font-size: 2rem; }
+}
