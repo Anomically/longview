@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Day - Profil Artis | Longview</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling tambahan khusus untuk halaman profil ini */
+        .album-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .album-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
+            border-color: var(--accent-color);
+        }
+
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,75 +44,55 @@
 
     <div class="container" style="max-width: 1100px; margin: auto; padding: 40px 20px;">
         
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 60px;">
-            <div style="flex: 1; min-width: 300px;">
-                <img src="https://rollingstone.com.br/wp-content/uploads/2024/07/green-day-foto-matt-winkelmeyergetty-images.jpg" alt="Green Day Profile" 
-                     style="width: 100%; border-radius: 15px; border: 1px solid #333; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000" 
+                 style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+            <h1 style="font-size: 5rem; margin: 20px 0 10px; letter-spacing: -4px;">GREEN DAY</h1>
+            <p style="font-size: 1.3rem; color: #888; max-width: 700px; margin: auto; line-height: 1.6;">
+                Membawa semangat punk dari Berkeley ke seluruh dunia. Tiga dekade, belasan album, dan energi yang tidak pernah padam.
+            </p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 50px;">
+
+        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Katalog Album Wajib</h2>
+        
+        <div class="album-grid">
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Green_Day_-_Dookie_cover.jpg" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin: 0; font-size: 1.5rem;">Dookie</h3>
+                    <p style="color: var(--accent-color); margin: 5px 0;">1994</p>
+                    <p style="color: #666; font-size: 0.9rem;">Album yang meledakkan genre pop-punk ke permukaan mainstream.</p>
+                </div>
             </div>
-            
-            <div style="flex: 1.5; min-width: 300px;">
-                <span class="tag" style="background: #e91e63;">Punk Rock Legend</span>
-                <h1 style="font-size: 4.5rem; margin: 15px 0; letter-spacing: -3px; line-height: 1;">GREEN DAY</h1>
-                <p style="font-size: 1.25rem; color: #aaa; line-height: 1.7; margin-bottom: 25px;">
-                    Dari panggung bawah tanah *924 Gilman Street* hingga menjadi ikon global. Green Day bukan sekadar band, mereka adalah suara pemberontakan yang abadi.
-                </p>
-                
-                <div style="background: #181818; padding: 10px; border-radius: 15px;">
-                    <iframe style="border-radius:12px" 
-                        src="<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5Qhn2FpGWmTjCuntF09j7g?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>" 
-                        width="100%" height="152" frameBorder="0" allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                    </iframe>
+
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.jpg" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin: 0; font-size: 1.5rem;">American Idiot</h3>
+                    <p style="color: var(--accent-color); margin: 5px 0;">2004</p>
+                    <p style="color: #666; font-size: 0.9rem;">Sebuah opera rock ambisius yang menjadi kritik tajam kondisi sosial-politik.</p>
+                </div>
+            </div>
+
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Green_Day_-_Saviors.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin: 0; font-size: 1.5rem;">Saviors</h3>
+                    <p style="color: var(--accent-color); margin: 5px 0;">2024</p>
+                    <p style="color: #666; font-size: 0.9rem;">Kembali ke akar suara klasik mereka dengan sentuhan lirik yang lebih dewasa.</p>
                 </div>
             </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1.8fr 1.2fr; gap: 50px;">
-            
-            <article>
-                <h2 style="font-size: 2rem; border-bottom: 2px solid #e91e63; display: inline-block; margin-bottom: 25px;">Perjalanan Karier</h2>
-                <div style="color: #ddd; line-height: 1.8; font-size: 1.1rem;">
-                    <p>Billie Joe Armstrong dan Mike Dirnt membentuk band ini pada tahun 1987 di East Bay, California. Bersama Tré Cool, mereka merilis album <strong>'Dookie'</strong> pada 1994 yang secara instan mendefinisikan ulang genre pop-punk bagi jutaan remaja.</p>
-                    <p style="margin-top: 15px;">Puncak kedewasaan mereka terlihat pada tahun 2004 lewat <strong>'American Idiot'</strong>, sebuah opera rock yang membedah kegelisahan politik Amerika. Konsistensi mereka selama hampir empat dekade membuktikan bahwa semangat punk tidak pernah benar-benar mati.</p>
-                </div>
-            </article>
-
-            <aside style="background: #111; padding: 30px; border-radius: 20px; border: 1px solid #222;">
-                <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.5rem; color: #fff;">3 Album Wajib</h3>
-                
-                <div style="display: flex; flex-direction: column; gap: 25px;">
-                    <div style="display: flex; gap: 15px; align-items: center;">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Green_Day_-_Dookie_cover.jpg" style="width: 80px; height: 80px; border-radius: 8px;">
-                        <div>
-                            <h4 style="margin: 0;">Dookie</h4>
-                            <p style="color: #666; font-size: 0.9rem;">1994 • Pop Punk</p>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 15px; align-items: center;">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.jpg" style="width: 80px; height: 80px; border-radius: 8px;">
-                        <div>
-                            <h4 style="margin: 0;">American Idiot</h4>
-                            <p style="color: #666; font-size: 0.9rem;">2004 • Rock Opera</p>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 15px; align-items: center;">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Green_Day_-_Saviors.png" style="width: 80px; height: 80px; border-radius: 8px;">
-                        <div>
-                            <h4 style="margin: 0;">Saviors</h4>
-                            <p style="color: #666; font-size: 0.9rem;">2024 • Alternative</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="artist.html" style="display: block; text-align: center; margin-top: 30px; color: #e91e63; text-decoration: none; font-weight: bold; font-size: 0.9rem;">← Kembali ke Katalog Artis</a>
-            </aside>
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="artist.html" class="btn" style="padding: 15px 40px;">Lihat Artis Lainnya</a>
         </div>
     </div>
 
-    <footer style="margin-top: 80px; padding: 40px; text-align: center; border-top: 1px solid #222; color: #555;">
-        <p>© 2026 Longview Portal. Powered by Punk Rock.</p>
+    <footer style="margin-top: 100px; padding: 40px; text-align: center; border-top: 1px solid #222; color: #444;">
+        <p>© 2026 Longview Portal — No Spotify, Just Real Visuals.</p>
     </footer>
 
 </body>
