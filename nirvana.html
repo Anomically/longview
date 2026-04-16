@@ -1,48 +1,201 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <script>
+        if (sessionStorage.getItem('akses_longview') !== 'diizinkan') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nirvana - Profil Artis | Longview</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Tambahan agar identik dengan Green Day & MCR */
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+            padding-top: 50px;
+        }
+
+        .artist-img-container img {
+            width: 380px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .artist-title-area {
+            flex: 1;
+        }
+
+        .genre-tag {
+            color: #ff3e3e; /* Warna aksen Longview */
+            font-weight: bold;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .artist-title-area h1 {
+            font-size: 4.5rem;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        .artist-title-area p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        /* Layout Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1.2fr;
+            gap: 60px;
+        }
+
+        /* Biografi */
+        .biography h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .biography p {
+            line-height: 1.8;
+            color: #ddd;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        /* Sidebar Album Wajib */
+        .album-sidebar {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+
+        .album-sidebar h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .album-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .album-item img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .album-info {
+            font-size: 1rem;
+            color: #eee;
+        }
+
+        .album-info em {
+            font-style: italic;
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .artist-img-container img { width: 100%; }
+            .content-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <a href="index.html" class="logo">Long<span>view</span></a>
+        <a href="index.html" class="logo">LONG<span>VIEW</span></a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="news.html">News</a>
-            <a href="culture.html">Culture</a>
-            <a href="artist.html">Artists</a>
+            <a href="index.html">HOME</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="news.html">NEWS</a>
+            <a href="culture.html">CULTURE</a>
+            <a href="artist.html">ARTISTS</a>
         </nav>
     </header>
 
-   <div class="card" style="text-align: center; padding-top: 25px;">
-    <img src="https://images.unsplash.com/photo-1524230613591-c197e9d9bc31?q=80&w=400" alt="Nirvana" 
-         style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: auto; border: 3px solid #444; transition: 0.3s;">
-    <div class="card-content">
-        <span class="tag">Grunge</span>
-        <h3>Nirvana</h3>
-        <p>Suara dari Seattle yang mendefinisikan musik alternatif generasi 90-an.</p>
-        <a href="nirvana.html" class="btn" style="padding: 10px 25px; font-size: 13px;">Lihat Profil</a>
-    </div>
-</div>
+    <div class="container">
+        
+        <div class="hero">
+            <div class="artist-img-container">
+                <img src="https://www.hollywoodreporter.com/wp-content/uploads/2011/09/nirvana-publicity-michael-lavine-2-a-l.jpg?w=1440&h=810&crop=1" alt="Nirvana Profile">
+            </div>
+            <div class="artist-title-area">
+                <span class="genre-tag">GRUNGE / ALT ROCK</span>
+                <h1>Nirvana</h1>
+                <p>Suara dari Seattle yang meruntuhkan dominasi musik pop era 90-an dan melahirkan generasi Grunge.</p>
+            </div>
+        </div>
 
-        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 40px;">
-            <article style="line-height: 1.8;">
-                <h2 class="section-title">Biografi</h2>
-                <p>Dipimpin oleh Kurt Cobain, Nirvana meledak melalui lagu 'Smells Like Teen Spirit'. Mereka membawa suara yang mentah, jujur, dan penuh distorsi yang kemudian dikenal dunia sebagai musik <em>Alternative Rock</em>.</p>
-            </article>
-            <aside style="background: var(--card-bg); padding: 25px; border-radius: 8px;">
+        <div class="content-grid">
+            
+            <div class="biography">
+                <h2>Biografi</h2>
+                <p>Dibentuk di Aberdeen, Washington pada tahun 1987 oleh <strong>Kurt Cobain</strong> dan <strong>Krist Novoselic</strong>, Nirvana menjadi kekuatan yang mengubah sejarah musik selamanya. Dengan masuknya Dave Grohl pada drum, mereka menciptakan energi yang tak tertandingi.</p>
+                <p>Album kedua mereka, <em>Nevermind</em> (1991), secara mengejutkan membawa musik underground ke arus utama global dan menyingkirkan dominasi "Hair Metal" dari tangga lagu. Meskipun karir mereka terhenti secara tragis pada tahun 1994, warisan Nirvana tetap menjadi standar emas bagi musik alternatif hingga hari ini.</p>
+            </div>
+
+            <div class="album-sidebar">
                 <h3>Album Wajib</h3>
-                <ul style="list-style: none; padding: 0; margin-top: 15px;">
-                    <li>• Bleach (1989)</li>
-                    <li>• Nevermind (1991)</li>
-                    <li>• In Utero (1993)</li>
-                </ul>
-            </aside>
+                
+                <div class="album-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Nirvana-Bleach.jpg" alt="Bleach">
+                    <div class="album-info">
+                        <em>Bleach</em> (1989)
+                    </div>
+                </div>
+
+                <div class="album-item">
+                    <img src="https://i.guim.co.uk/img/media/718be017da4c4851dbaa759a5b788c6d0e9f35c4/73_19_3397_2716/master/3397.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=535521fa96dfed0687393fa32d3c740b" alt="Nevermind">
+                    <div class="album-info">
+                        <em>Nevermind</em> (1991)
+                    </div>
+                </div>
+
+                <div class="album-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e5/In_Utero_%28Nirvana%29_album_cover.jpg" alt="In Utero">
+                    <div class="album-info">
+                        <em>In Utero</em> (1993)
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
+
 </body>
 </html>
